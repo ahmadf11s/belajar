@@ -19,3 +19,7 @@ Launch the Browser and Open sehatq.com
 Login with Unregistered Account
     [Tags]    Login    Negative
     Login with Email Unregister      ${email}      ${password}
+
+Login with Empty Email and Password
+    [Tags]    Login    Negative
+    Login with Empty Email and Password
