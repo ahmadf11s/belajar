@@ -23,3 +23,19 @@ Login with Unregistered Account
 Login with Empty Email and Password
     [Tags]    Login    Negative
     Login with Empty Email and Password
+
+Login with Invalid Format Email
+    [Tags]    Login    Negative
+    Login with Invalid Format Email      hohoho      ${password}
+
+Login with Minimum Charcter Password
+    [Tags]    Login    Negative
+    Login with Minimum Password          ${email}    123
+
+Forgot Password with Invalid Format Email
+    [Tags]    Forgot    Negative
+    Forgot Password with Invalid Format Email    dwa    
+
+Forgot Password with Empty Email
+    [Tags]    Forgot1    Negative
+    Forgot Password with Empty Email    A
