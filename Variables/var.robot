@@ -8,4 +8,4 @@ ${email}               fauzi+11@kitabisa.com
 ${password}            87654321
 ${emailRegis}          fauzi+1@kitabisa.com
 ${nameSuccess}         Ahmad Fauzi
-${emailRegisSuccess}   fauzi+1000@kitabisa.com
+${emailRegisSuccess}   fauzi+1100@kitabisa.com

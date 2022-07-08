@@ -42,8 +42,9 @@ Register with Empty Password
     Register with Empty Password    A
 
 Register Success with Valid Data
-    [Tags]    All   Register  Negative
-    Register with Valid Data        ${nameSuccess}    ${emailRegisSuccess}    ${password}
+    [Tags]    All   Register1  Positive
+    Register with Valid Data        ${nameSuccess}     ${emailRegisSuccess}    ${password}
+
 
 Login with Unregistered Account
     [Tags]    All   Login     Negative
