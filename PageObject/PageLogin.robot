@@ -1,5 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary     timeout=10
+Library     SeleniumLibrary     timeout=15
 
 *** Variable ***
 ${userBtn}                   xpath://*[@id="__next"]/header/div/div[1]/div[3]/div/a[2]/img

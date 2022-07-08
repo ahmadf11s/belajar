@@ -52,4 +52,4 @@ Register with Valid Data
     PageRegister.Input Password      ${pwd}
     Select Checkbox Agreement
     Click Register Button
-    PageLogin.Verify Account
+    # PageRegister.Verify Already Registered

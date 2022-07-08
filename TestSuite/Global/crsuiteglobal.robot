@@ -4,6 +4,7 @@ Resource    ../../Variables/var.robot
 Resource    ../../Config/config.robot
 Resource    ../../Test/Global/TestLogin.robot
 Resource    ../../Test/Global/TestRegister.robot
+Resource    ../../Test/Global/TestSetting.robot
 
 Suite Setup         Launch the Browser and Open sehatq.com
 Suite Teardown      Close all browsers
@@ -42,9 +43,8 @@ Register with Empty Password
     Register with Empty Password    A
 
 Register Success with Valid Data
-    [Tags]    All   Register1  Positive
-    Register with Valid Data        ${nameSuccess}     ${emailRegisSuccess}    ${password}
-
+    [Tags]    All   Register  Positive
+    Register with Valid Data        ${nameSuccess}     ${emailRegisSuccess}     ${password}
 
 Login with Unregistered Account
     [Tags]    All   Login     Negative
@@ -71,9 +71,33 @@ Forgot Password with Empty Email
     Forgot Password with Empty Email  A
 
 Login Success with Email
-    [Tags]    All   Login     Positive
+    [Tags]    All   Login1     Positive
     Login Success with Email          ${emailRegis}   ${password}
 
 Logout Success
     [Tags]    All   Logout     Positive
     Logout Success
+
+Access Edit Profile Page
+    [Tags]    All   Setting    Positive
+    Access Edit Profile Page
+
+Edit Profile with Empty Birthday
+    [Tags]    All   Setting    Negative
+    Edit Profile with Empty Birthday    
+
+Edit Profile with Empty Gender
+    [Tags]    All   Setting    Negative
+    Edit Profile with Empty Gender
+
+Edit Profile with Empty Height
+    [Tags]    All   Setting    Negative
+    Edit Profile with Empty Height
+
+Edit Profile with Empty Weight
+    [Tags]    All   Setting    Negative
+    Edit Profile with Empty Weight
+
+Edit Profile with Empty Address
+    [Tags]    All   Setting    Negative
+    Edit Profile with Empty Address
