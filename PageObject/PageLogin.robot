@@ -84,7 +84,7 @@ Verify Error Message Email is Required on Forgot Password
 Click Lanjut Button
     Click Element                       ${lanjutBtn}
 
-Verify Login Success
+Verify Account
     Wait Until Page Contains Element    ${iconProfile}   
     Element Should Be Visible           ${iconProfile}  
 

@@ -55,4 +55,4 @@ Login Success with Email
     PageLogin.Input Email           ${email}
     PageLogin.Input Password        ${pwd}
     Click Login Button
-    PageLogin.Verify Login Success
+    PageLogin.Verify Account
