@@ -41,5 +41,9 @@ Forgot Password with Empty Email
     Forgot Password with Empty Email  A
 
 Login Success with Email
-    [Tags]    All   Login     Positive
+    [Tags]    All   Login     Positive    coba
     Login Success with Email          ${emailRegis}    ${password}
+
+Logout Success
+    [Tags]    All   Logout     Positive    coba
+    Logout Success

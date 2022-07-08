@@ -12,6 +12,7 @@ ${msgErrPassword}            xpath://*[@id="__next"]/div/div/div/div/div[2]/div/
 ${msgErrLupaPass}            xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/div[1]/div/div/div/div
 ${lanjutBtn}                 xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/button
 ${iconProfile}               id=popover-profile
+${logoutBtn}                 xpath://*[@id="popover-profile"]/div[2]/div/a[3]
 
 *** Keywords ***
 Click Account Button
@@ -86,3 +87,8 @@ Click Lanjut Button
 Verify Login Success
     Wait Until Page Contains Element    ${iconProfile}   
     Element Should Be Visible           ${iconProfile}  
+
+Logout Success
+    Click Element                       ${iconProfile}
+    Wait Until Page Contains Element    ${logoutBtn}
+    Click Element                       ${logoutBtn}    
