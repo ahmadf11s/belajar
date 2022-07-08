@@ -9,9 +9,9 @@ ${loginBtn}                  xpath://*[@id="__next"]/div/div/div/div/div[2]/div/
 ${msgErrEmailNotRegister}    xpath://span[contains(text(),'Email harus diisi dengan benar')]
 ${msgErrEmail}               xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/div[1]/div/div
 ${msgErrPassword}            xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/div[2]/div/div
-# ${lupaPassBtn}               xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/div[3]/a
 ${msgErrLupaPass}            xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/div[1]/div/div/div/div
 ${lanjutBtn}                 xpath://*[@id="__next"]/div/div/div/div/div[2]/div/form/button
+${iconProfile}               id=popover-profile
 
 *** Keywords ***
 Click Account Button
@@ -60,9 +60,6 @@ Verify Error Message Minimal Password
     ${response}=       Get Text         ${msgErrPassword}  
     Should Be Equal As Strings          ${response}     Password harus diisi minimal 6
 
-# Click Forgot Password Button
-#     Click Element                       ${lupaPassBtn}}
-
 Input Email Forgot Password
     [Arguments]    ${emailForgot}
     Wait Until Page Contains Element    ${txtEmail}  
@@ -85,3 +82,7 @@ Verify Error Message Email is Required on Forgot Password
 
 Click Lanjut Button
     Click Element                       ${lanjutBtn}
+
+Verify Login Success
+    Wait Until Page Contains Element    ${iconProfile}   
+    Element Should Be Visible           ${iconProfile}  

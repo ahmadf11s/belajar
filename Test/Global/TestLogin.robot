@@ -48,3 +48,11 @@ Forgot Password with Empty Email
     PageLogin.Input Email Forgot Password       ${emailForgot}
     Clear Email Forgot Password           
     PageLogin.Verify Error Message Email is Required on Forgot Password
+
+Login Success with Email
+    [Arguments]    ${email}    ${pwd}    
+    Click Account Button
+    PageLogin.Input Email           ${email}
+    PageLogin.Input Password        ${pwd}
+    Click Login Button
+    PageLogin.Verify Login Success
