@@ -71,7 +71,7 @@ Forgot Password with Empty Email
     Forgot Password with Empty Email  A
 
 Login Success with Email
-    [Tags]    All   Login1     Positive
+    [Tags]    All   Login     Positive
     Login Success with Email          ${emailRegis}   ${password}
 
 Logout Success
