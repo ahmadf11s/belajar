@@ -20,7 +20,7 @@ Launch the Browser and Open sehatq.com
 *** Test Case ***
 Register with Invalid Full Name
     [Tags]    All   Register  Negative
-    Register with Full Name other than Letters    69
+    Register with Full Name other than Letters     69
 
 Register with Empty Full Name
     [Tags]    All   Register  Negative
@@ -28,7 +28,7 @@ Register with Empty Full Name
 
 Register with Invalid Format Email
     [Tags]    All   Register  Negative
-    Register with Invalid Format Email Register   dwa
+    Register with Invalid Format Email Register    dwa
 
 Register with Empty Email
     [Tags]    All   Register  Negative
@@ -36,7 +36,7 @@ Register with Empty Email
 
 Register with Minimum Password Character
     [Tags]    All   Register  Negative
-    Register with Minimum Password Character      123
+    Register with Minimum Password Character       123
 
 Register with Empty Password
     [Tags]    All   Register  Negative
@@ -44,7 +44,7 @@ Register with Empty Password
 
 Register Success with Valid Data
     [Tags]    All   Register  Positive
-    Register with Valid Data        ${nameSuccess}     ${emailRegisSuccess}     ${password}
+    Register with Valid Data         ${nameSuccess}   ${emailRegisSuccess}     ${password}
 
 Login with Unregistered Account
     [Tags]    All   Login     Negative
@@ -101,3 +101,55 @@ Edit Profile with Empty Weight
 Edit Profile with Empty Address
     [Tags]    All   Setting    Negative
     Edit Profile with Empty Address
+
+Change Profile Picture
+    [Tags]    All   Setting    Positive
+    Change Profile Picture           ${filePngPath}
+
+Edit Profile with Invalid Height
+    [Tags]    All   Setting    Negative
+    Edit Profile with Invalid Height              fauzi
+
+Edit Profile with Minimal Height
+    [Tags]    All   Setting    Negative
+    Edit Profile with Minimal Height              1
+
+Edit Profile with Maximal Height
+    [Tags]    All   Setting    Negative
+    Edit Profile with Maximal Height              2121
+
+Edit Profile with Invalid Weight
+    [Tags]    All   Setting    Negative
+    Edit Profile with Invalid Weight              fauzi
+
+Edit Profile with Invalid Phone Number
+    [Tags]    All   Setting    Negative
+    Edit Profile with Invalid Phone Number        hohohohoho
+
+Edit Profile with Minimal Address Profile
+    [Tags]    All   Setting    Negative
+    Edit Profile with Minimal Address Profile     a
+
+Edit Profile with Maximal Address Profile
+    [Tags]    All   Setting    Negative
+    Edit Profile with Maximal Address Profile     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survive
+
+Input Height
+    [Tags]    All   Setting    Positive
+    Input Height            175
+
+Input Weight
+    [Tags]    All   Setting    Positive
+    Input Weight            80
+
+Input Phone Number
+    [Tags]    All   Setting    Positive
+    Input Phone Number      ${phoneNumber}
+
+Input Address
+    [Tags]    All   Setting    Positive
+    Input Address Profile   ${address} 
+
+Verifikasi Profile
+    [Tags]    All   Setting    Positive
+    Verifikasi Now

@@ -9,4 +9,9 @@ ${email}               fauzi+11@kitabisa.com
 ${password}            87654321
 ${emailRegis}          fauzi+1@kitabisa.com
 ${nameSuccess}         Ahmad Fauzi
-${emailRegisSuccess}   email1@gmail.com
+${emailRegisSuccess}   email2@gmail.com
+${phoneNumber}         089686064265
+${address}             depok
+
+# File
+${filePngPath}          ${CURDIR}/fauzi.png
