@@ -1,27 +1,8 @@
 *** Variables ***
-#${url}  https://kitabisa.xyz
-${REMOTE_URL}   http://qa:qa@35.240.132.153:4040/wd/hub
-${MAIN_PATH}    /path/to/your/folder/nguji/kanvas
-#18.139.109.74
+${REMOTE_URL}   https://www.sehatq.com/
 
 *** Keywords ***
 Open Local Browser
-    [Arguments]     ${url}  ${browser}
-    open browser    ${url}  ${browser}      
+    [Arguments]     ${url}    ${browser}
+    open browser    ${url}    ${browser}      
     maximize browser window
-
-Open The Browser
-    [Arguments]     ${url}  ${browser}
-    open browser    ${url}
-    ...  remote_url=${REMOTE_URL}
-    ...  desired_capabilities=browserName:${browser},idleTimeout:150
-    maximize browser window
-
-Open Mobile Emulation
-    [Arguments]     ${url}  ${browser}
-    ${mobile emulation}=    Create Dictionary    deviceName=Pixel 2
-    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chrome_options}   add_experimental_option    mobileEmulation    ${mobile emulation}
-    ${options}=     Call Method     ${chrome_options}    to_capabilities     
-
-    Open Browser    ${url}    browser=${browser}    remote_url=${REMOTE_URL}     desired_capabilities=${options}
